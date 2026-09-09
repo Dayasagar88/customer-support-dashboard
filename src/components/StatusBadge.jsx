@@ -1,0 +1,19 @@
+function StatusBadge({ status }) {
+  const styles = {
+    Open: "bg-blue-100 text-blue-700",
+    "In Progress": "bg-yellow-100 text-yellow-700",
+    Resolved: "bg-green-100 text-green-700",
+  };
+
+  return (
+    <span
+      className={`px-3 py-1 rounded-full text-xs font-medium ${
+        styles[status]
+      }`}
+    >
+      {status}
+    </span>
+  );
+}
+
+export default StatusBadge;
